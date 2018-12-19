@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CustomMaterialModuleModule } from './custom-material-module/custom-material-module.module'
+import { MaterialModule } from './material/material.module';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -15,6 +15,11 @@ import { ContentComponent } from './content/content.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { WidgetComponent } from './widget/widget.component';
+import { UiElementComponent } from './ui-element/ui-element.component';
+import { FormComponent } from './form/form.component';
+import { ChartComponent } from './chart/chart.component';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
   declarations: [
@@ -24,13 +29,18 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HeroDetailComponent,
     MessagesComponent,
     DashboardComponent,
+    WidgetComponent,
+    UiElementComponent,
+    FormComponent,
+    ChartComponent,
+    TableComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    CustomMaterialModuleModule,
+    MaterialModule,
     NavModule,
     HeaderModule
   ],

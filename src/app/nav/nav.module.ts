@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CustomMaterialModuleModule } from '../custom-material-module/custom-material-module.module'
+import { MaterialModule } from '../material/material.module'
 
 import { NavComponent } from './nav';
 import { AppRoutingModule } from '../app-routing.module';
@@ -10,7 +10,7 @@ import { AppRoutingModule } from '../app-routing.module';
   ],
   imports: [
     AppRoutingModule,
-    CustomMaterialModuleModule
+    MaterialModule
   ],
   exports: [NavComponent],
   providers: []

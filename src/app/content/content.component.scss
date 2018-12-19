@@ -1,6 +1,8 @@
 .content{
   position: absolute;
-  left: 210px;
+  left: 220px;
   top: 60px;
   padding: 20px;
+  width: calc(100% - 260px);
+  height: auto;
 }

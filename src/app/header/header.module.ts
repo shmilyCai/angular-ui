@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from '../app-routing.module';
-import { CustomMaterialModuleModule } from '../custom-material-module/custom-material-module.module'
+import { MaterialModule } from '../material/material.module'
 
 import { HeaderComponent } from './header';
 
@@ -10,7 +10,7 @@ import { HeaderComponent } from './header';
   ],
   imports: [
     AppRoutingModule,
-    CustomMaterialModuleModule
+    MaterialModule
   ],
   exports: [HeaderComponent],
   providers: []

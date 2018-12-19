@@ -116,4 +116,5 @@ import {
     MatTreeModule,
   ],
 })
-export class CustomMaterialModuleModule { }
+
+export class MaterialModule { }
