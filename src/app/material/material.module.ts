@@ -38,6 +38,10 @@ import {
   MatTreeModule,
   } from '@angular/material';
 
+
+/**
+ * 该模块定义material模块*/
+
 @NgModule({
   declarations: [],
   imports: [

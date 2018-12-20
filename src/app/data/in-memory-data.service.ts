@@ -1,6 +1,6 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Injectable } from '@angular/core';
-import { Hero } from './../type/hero';
+import { Hero } from '../model/hero';
 
 @Injectable({
   providedIn: 'root'

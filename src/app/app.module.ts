@@ -11,11 +11,11 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api/in-memory-web-api.module';
 import { InMemoryDataService }  from './data/in-memory-data.service';
 
-import { NavModule } from './nav/nav.module';
-import { HeaderModule } from './header/header.module';
+/*import { LayoutModule } from './layout/layout.module';*/
 
 import { AppComponent } from './app.component';
-import { HeroesComponent } from './heroes/heroes.component';
+import { LoginComponent } from './login/login.component';
+ /*import { HeroesComponent } from './heroes/heroes.component';
 import { ContentComponent } from './content/content.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
@@ -26,21 +26,12 @@ import { FormComponent } from './form/form.component';
 import { ChartComponent } from './chart/chart.component';
 import { TableComponent } from './table/table.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
+import { LayoutComponent } from './layout/layout.component';*/
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent,
-    ContentComponent,
-    HeroDetailComponent,
-    MessagesComponent,
-    DashboardComponent,
-    WidgetComponent,
-    UiElementComponent,
-    FormComponent,
-    ChartComponent,
-    TableComponent,
-    HeroSearchComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -52,10 +43,7 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    ),
-
-    NavModule,
-    HeaderModule,
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
