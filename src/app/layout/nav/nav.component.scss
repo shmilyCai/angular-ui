@@ -1,13 +1,26 @@
 .nav{
   position:absolute;
-  top:60px;
-  height:calc(100% - 60px);
+  top:0;
+  height:100%;
   width:220px;
-  background:#673fb4;
+  background:#262a33;
   color:#fff;
+  z-index: 100;
 
+  h1,h2,h3,h4,h5,h6{
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+  }
   a{
-    color: #fff;
+    color: #a0a7b8;
     text-decoration: none;
+    border: #f00 0 solid;
+    line-height: 48px;
+    width: 100%;
+    &:hover, &:active{
+      background: #333845;
+      color: #78be4f;
+    }
   }
 }
