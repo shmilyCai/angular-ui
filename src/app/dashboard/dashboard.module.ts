@@ -7,7 +7,7 @@ import { dashboardRoutes } from './dashboar.route';
 
 import { DashboardComponent } from './dashboard.component';
 import { HeroSearchComponent } from '../demo/hero-search/hero-search.component';
-import { MessagesComponent } from '../ui/messages/messages.component';
+import { MessagesComponent } from '../messages/messages.component';
 
 import { HeroService } from '../service/hero.service';
 
@@ -24,8 +24,7 @@ import { HeroService } from '../service/hero.service';
     SharedModule,
     RouterModule.forChild(dashboardRoutes)
   ],
-  exports:[],
-  provider:[HeroService]
+  exports:[]
 })
 export class DashboardModule {
 

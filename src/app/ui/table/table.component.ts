@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MaterialModule } from '../material/material.module';
+import { MaterialModule } from 'src/app/material/material.module';
 
 export interface PeriodicElement {
   name: string;

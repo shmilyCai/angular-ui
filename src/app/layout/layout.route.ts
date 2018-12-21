@@ -9,6 +9,10 @@ export const layoutRoutes = [
       {
         path: 'dashboard',
         loadChildren: 'src/app/dashboard/dashboard.module#DashboardModule'
+      },
+      {
+        path: 'ui',
+        loadChildren: 'src/app/ui/ui.module#UiModule'
       }
     ]
   }
