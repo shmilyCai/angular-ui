@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { throwIfAlreadyLoaded } from './module-import-guard';
 import { SharedModule } from '../common/shared/shared.module';
+import { MaterialModule } from 'src/app/material/material.module';
 import { uiRoutes } from './ui.route';
 
 import { HeroesComponent } from '../demo/heroes/heroes.component';
@@ -38,6 +39,7 @@ import { UiComponent } from './ui.component';
     FormsModule,
     HttpClientModule,
     SharedModule,
+    MaterialModule,
     RouterModule.forChild(uiRoutes)
   ],
   exports:[]

@@ -9,8 +9,6 @@ import { DashboardComponent } from './dashboard.component';
 import { HeroSearchComponent } from '../demo/hero-search/hero-search.component';
 import { MessagesComponent } from '../messages/messages.component';
 
-import { HeroService } from '../service/hero.service';
-
 /**
  * dashboard组件*/
 @NgModule({

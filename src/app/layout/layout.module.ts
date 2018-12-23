@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { MaterialModule } from '../material/material.module';
 import { layoutRoutes } from './layout.route';
+import { SharedModule } from '../common/shared/shared.module';
 
 import { LayoutComponent } from './layout.component';
 import { NavComponent } from './nav/nav.component';
@@ -22,6 +23,7 @@ import { ContentComponent } from './content/content.component';
   imports: [
     CommonModule,
     MaterialModule,
+    SharedModule,
     RouterModule.forChild(layoutRoutes)
   ],
   exports:[]

@@ -1,0 +1,13 @@
+.row{
+    width: 100%;
+    .col-md-6{
+        width: 50%;
+        display: block;
+        float: left;
+    }
+    .col-sm{
+        float: left;
+        width: 33%;
+        text-align: center;
+    }
+}

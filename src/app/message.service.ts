@@ -14,4 +14,8 @@ export class MessageService {
   clear() {
     this.messages = [];
   }
+
+  get(){
+    return this.messages.length;
+  }
 }

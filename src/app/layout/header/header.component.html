@@ -26,7 +26,9 @@
       <button mat-menu-item>英雄展示</button>
       <button mat-menu-item>退 出</button>
     </mat-menu>
-    <button mat-button [matMenuTriggerFor]="user">个人信息</button>
+    <button mat-button [matMenuTriggerFor]="user">
+      <span matBadge="{{messageNums}}" matBadgeOverlap="false">个人信息</span>
+    </button>
     <mat-menu #user="matMenu">
       <button mat-menu-item>个人信息</button>
       <button mat-menu-item>密码设置</button>

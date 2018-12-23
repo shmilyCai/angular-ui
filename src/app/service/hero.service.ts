@@ -23,7 +23,7 @@ export class HeroService {
     private messageService: MessageService
   ) {}
 
-  /** GET heroes from the server */
+  /** http获取heroes从服务器上 */
   getHeroes (): Observable<Hero[]> {
     return this.http.get<Hero[]>(this.heroesUrl)
       .pipe(
