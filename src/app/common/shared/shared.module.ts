@@ -6,11 +6,8 @@ import { CommonModule } from '@angular/common';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api/in-memory-web-api.module';
 import { InMemoryDataService }  from '../../data/in-memory-data.service';
 
-import { HeroService } from '../../service/hero.service';
-
 import { ChartsModule } from 'ng2-charts';
 import { MaterialModule } from '../../material/material.module';
-import { MessageService } from 'src/app/message.service';
 
 /**
  * 该模块放各种公共directive，provider，filter*/
@@ -31,6 +28,6 @@ import { MessageService } from 'src/app/message.service';
     MaterialModule,
     HttpClientModule
   ],
-  providers:[HeroService, MessageService]
+  providers:[]
 })
 export class SharedModule { }

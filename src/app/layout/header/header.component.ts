@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { MessageService } from 'src/app/message.service';
+import { MessageService } from '../../service/message.service';
 
 @Component({
   selector: 'app-header',
@@ -9,10 +9,17 @@ import { MessageService } from 'src/app/message.service';
 })
 export class HeaderComponent implements OnInit {
 
+  nums:any
+
   constructor(private messageService: MessageService) {}
 
   ngOnInit() {
+    this.getNums();
   }
 
-  messageNums:Number = this.messageService.get();
+  getNums():void{
+    this.nums =  this.messageService.get();
+  }
+
+ 
 }

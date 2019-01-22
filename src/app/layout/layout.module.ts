@@ -11,6 +11,7 @@ import { LayoutComponent } from './layout.component';
 import { NavComponent } from './nav/nav.component';
 import { HeaderComponent } from './header/header.component';
 import { ContentComponent } from './content/content.component';
+import { MessageService } from '../service/message.service';
 
 /**
  * 整个项目的布局组件*/
@@ -27,7 +28,8 @@ import { ContentComponent } from './content/content.component';
     SharedModule,
     RouterModule.forChild(layoutRoutes)
   ],
-  exports:[]
+  exports:[],
+  providers:[MessageService]
 })
 export class LayoutModule { 
  

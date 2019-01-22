@@ -7,15 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
-  showFiller = false;
-
   constructor() { }
 
   ngOnInit() {
   }
-
-
-  shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
 
 
 

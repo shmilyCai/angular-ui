@@ -1,8 +1,9 @@
 .nav{
-  position:absolute;
+  position:fixed;
   top:0;
   height:100%;
   width:220px;
+  // background:#673fb4;
   background:#4054b2;
   color:#fff;
   z-index: 100;
@@ -15,11 +16,11 @@
   a{
     color: #ffffff;
     text-decoration: none;
-    border: #f00 0 solid;
     line-height: 48px;
     width: 100%;
+    font-size: 14px;
     &:hover, &:active{
-      color: #78be4f;
+      color:#fafafa;
     }
   }
 }

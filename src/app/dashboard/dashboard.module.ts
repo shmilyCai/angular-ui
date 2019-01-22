@@ -9,6 +9,9 @@ import { DashboardComponent } from './dashboard.component';
 import { HeroSearchComponent } from '../demo/hero-search/hero-search.component';
 import { MessagesComponent } from '../messages/messages.component';
 
+import { HeroService } from '../service/hero.service';
+import { MessageService } from '../service/message.service';
+
 /**
  * dashboard组件*/
 @NgModule({
@@ -22,7 +25,8 @@ import { MessagesComponent } from '../messages/messages.component';
     SharedModule,
     RouterModule.forChild(dashboardRoutes)
   ],
-  exports:[]
+  exports:[],
+  providers:[HeroService, MessageService]
 })
 export class DashboardModule {
 

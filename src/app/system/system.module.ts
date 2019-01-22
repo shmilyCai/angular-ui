@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from '../common/shared/shared.module';
 import { MaterialModule } from '../material/material.module';
 import { systemRoutes } from './system.route';
+import { UserService } from '../service/user.service';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { systemRoutes } from './system.route';
     SharedModule,
     MaterialModule,
     RouterModule.forChild(systemRoutes)
-  ]
+  ],
+  providers:[UserService]
 })
 export class SystemModule { }
