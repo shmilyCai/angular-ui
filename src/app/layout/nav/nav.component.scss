@@ -3,7 +3,7 @@
   top:0;
   height:100%;
   width:220px;
-  background:#262a33;
+  background:#4054b2;
   color:#fff;
   z-index: 100;
 
@@ -13,14 +13,20 @@
     text-align: center;
   }
   a{
-    color: #a0a7b8;
+    color: #ffffff;
     text-decoration: none;
     border: #f00 0 solid;
     line-height: 48px;
     width: 100%;
     &:hover, &:active{
-      background: #333845;
       color: #78be4f;
     }
   }
+}
+
+.logo{
+
+  height: 60px;
+  line-height: 60px;
+  //border-bottom: 1px solid #f00;
 }

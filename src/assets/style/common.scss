@@ -1,0 +1,21 @@
+*{
+  margin:0;
+  padding:0;
+}
+html, body {
+  height: 100%;
+  background: #fafafa;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.inline{
+  display: inline-block !important;
+}
+.pull-right{
+  float: right !important;
+}
+.pull-left{
+  float: left !important;
+}

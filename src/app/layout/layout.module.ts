@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
+
 import { MaterialModule } from '../material/material.module';
 import { layoutRoutes } from './layout.route';
 import { SharedModule } from '../common/shared/shared.module';
@@ -28,4 +29,6 @@ import { ContentComponent } from './content/content.component';
   ],
   exports:[]
 })
-export class LayoutModule { }
+export class LayoutModule { 
+ 
+}

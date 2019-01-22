@@ -1,31 +1,5 @@
 <div class="header">
   <span class="right">
-    <button mat-button >仪表盘</button>
-    <button mat-button [matMenuTriggerFor]="manage">库存管理</button>
-    <mat-menu #manage="matMenu">
-      <button mat-menu-item>库存</button>
-      <button mat-menu-item>入库单</button>
-      <button mat-menu-item>出库单</button>
-    </mat-menu>
-    <button mat-button [matMenuTriggerFor]="basicData">基本资料</button>
-    <mat-menu #basicData="matMenu">
-      <button mat-menu-item>仓库资料</button>
-      <button mat-menu-item>品类资料</button>
-      <button mat-menu-item>供应商资料</button>
-      <button mat-menu-item>客户资料</button>
-    </mat-menu>
-    <button mat-button [matMenuTriggerFor]="monitor">监控</button>
-     <mat-menu #monitor="matMenu">
-       <button mat-menu-item>应用列表</button>
-       <button mat-menu-item>英雄展示</button>
-       <button mat-menu-item>退 出</button>
-     </mat-menu>
-    <button mat-button [matMenuTriggerFor]="hero">英雄</button>
-    <mat-menu #hero="matMenu">
-      <button mat-menu-item>应用列表</button>
-      <button mat-menu-item>英雄展示</button>
-      <button mat-menu-item>退 出</button>
-    </mat-menu>
     <button mat-button [matMenuTriggerFor]="user">
       <span matBadge="{{messageNums}}" matBadgeOverlap="false">个人信息</span>
     </button>

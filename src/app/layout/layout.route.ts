@@ -13,6 +13,10 @@ export const layoutRoutes = [
       {
         path: 'ui',
         loadChildren: 'src/app/ui/ui.module#UiModule'
+      },
+      {
+        path: 'system',
+        loadChildren: 'src/app/system/system.module#SystemModule'
       }
     ]
   }
