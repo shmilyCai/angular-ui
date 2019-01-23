@@ -19,12 +19,14 @@ export class MenuService {
 
   constructor(
     private http: HttpClient,
-  ) {}
+  ) { }
 
-   /**获取 */
-   getHeroes (): Observable<Menu[]> {
+  /**获取 */
+  getHeroes(): Observable<Menu[]> {
     return this.http.get<Menu[]>(this.apiUrl);
   }
+
+  //获取用户
 
 
 

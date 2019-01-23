@@ -1,3 +1,5 @@
+@import './variable.scss';
+
 * {
     margin: 0;
     padding: 0;
@@ -674,4 +676,22 @@ h6,
     -webkit-transition: none;
     /* Safari 和 Chrome */
     -o-transition: none;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.text-red{
+    color: $red;
+}
+.text-green{
+    color: $green;
+}
+.text-yellow{
+    color: $yellow;
+}
+.text-grey{
+    color: $grey;
+}
+.text-blue{
+    color: $blue;
 }
