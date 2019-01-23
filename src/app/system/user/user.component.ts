@@ -1,29 +1,12 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Inject, Injector } from '@angular/core';
 import { UserService } from '../../service/user.service'
 import { User } from 'src/app/model/user';
-import { MatSort, MatTableDataSource, MatPaginator } from '@angular/material';
-
-
-export interface PeriodicElement {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  { position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H' },
-  { position: 2, name: 'Helium', weight: 4.0026, symbol: 'He' },
-  { position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li' },
-  { position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be' },
-  { position: 5, name: 'Boron', weight: 10.811, symbol: 'B' },
-  { position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C' },
-  { position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N' },
-  { position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O' },
-  { position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F' },
-  { position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne' },
-];
-
+import { ViewUser } from './_modal/_viewUser';
+import { MatSort, MatTableDataSource, MatPaginator, MatDialog } from '@angular/material';
+import { UpdateUser } from './_modal/_updateUser';
+import { ToastrService } from 'ngx-toastr';
+import { AddUser } from './_modal/_addUser';
+import swal from 'sweetalert';
 
 
 @Component({
@@ -41,7 +24,10 @@ export class UserComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor(private userService: UserService) { }
+  constructor(
+    private toastr: ToastrService,
+    private userService: UserService,
+    public dialog: MatDialog) { }
 
   ngOnInit() {
     this.getUsers();
@@ -57,21 +43,69 @@ export class UserComponent implements OnInit {
       });
   }
 
+  //表格过滤
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
+  //删除用户
   delete(user: User): void {
-    this.userService.deleteUser(user).subscribe();
+    swal({
+      title: "你确定要删除该用户吗?",
+      text: "你真的确定要删除该用户吗?",
+      icon: "error",
+      dangerMode: true,
+
+    }).then(willDelete => {
+      if (willDelete) {
+        this.userService.deleteUser(user).subscribe(result => {
+          this.toastr.success('删除用户成功');
+          this.getUsers();
+        });
+      }
+    });
+
   }
 
+  //获取单个用户展示
   get(user: User): void {
-    this.test = this.userService.getUser(user.id).subscribe();
-     console.log('this.test:' + this.test);
+    // this.test = this.userService.getUser(user.id).subscribe(result =>{});
+    //打开弹出框
+    const dialogRef = this.dialog.open(ViewUser, {
+      width: '350px',
+      data: user
+    });
+    //关闭弹出框后的操作
+    dialogRef.afterClosed().subscribe(result => { });
   }
 
+  //更新
   update(user: User): void {
-    //this.userService.updateUser(user).subscribe();
+    //打开弹出框
+    const dialogRef = this.dialog.open(UpdateUser, {
+      width: '350px',
+      data: { type: 'update', user: user }
+    });
+    //关闭弹出框后的操作
+    dialogRef.afterClosed().subscribe(result => {
+      this.getUsers();
+    });
+  }
+
+  //新建
+  new(): void {
+    //打开弹出框
+    const dialogRef = this.dialog.open(AddUser, {
+      width: '350px',
+      data: { type: 'add' }
+    });
+    //关闭弹出框后的操作
+    dialogRef.afterClosed().subscribe(result => {
+      this.getUsers();
+    });
   }
 
 }
+
+
+

@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>你好，{{data.name}}</h1>
+<div mat-dialog-content>
+    <mat-list role="list">
+        <mat-list-item role="listitem">ID：<span class="w-40 text-right">{{data.id}}</span></mat-list-item>
+        <mat-list-item role="listitem">名称：<span class="w-40 text-right">{{data.name}}</span></mat-list-item>
+        <mat-list-item role="listitem">电话：<span class="w-40 text-right">{{data.tel}}</span></mat-list-item>
+        <mat-list-item role="listitem">邮箱：<span class="w-40 text-right">{{data.email}}</span></mat-list-item>
+        <mat-list-item role="listitem">描述：<span class="w-40 text-right">{{data.desc}}</span></mat-list-item>
+        <mat-list-item role="listitem">状态：<span class="w-40 text-right">{{data.status}}</span></mat-list-item>
+    </mat-list>
+</div>
+<div class="text-right" mat-dialog-actions>
+    <button mat-button (click)="close()">关闭</button>
+</div>

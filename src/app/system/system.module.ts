@@ -11,12 +11,18 @@ import { SharedModule } from '../common/shared/shared.module';
 import { MaterialModule } from '../material/material.module';
 import { systemRoutes } from './system.route';
 import { UserService } from '../service/user.service';
+import { ViewUser } from './user/_modal/_viewUser';
+import { UpdateUser } from './user/_modal/_updateUser';
+import { AddUser } from './user/_modal/_addUser';
 
 @NgModule({
   declarations: [
     SystemComponent,
     UserComponent,
-    RoleComponent
+    RoleComponent,
+    ViewUser,
+    UpdateUser,
+    AddUser
   ],
   imports: [
     CommonModule,
@@ -28,6 +34,7 @@ import { UserService } from '../service/user.service';
     MaterialModule,
     RouterModule.forChild(systemRoutes)
   ],
+  entryComponents:[ViewUser, UpdateUser, AddUser],
   providers:[UserService]
 })
 export class SystemModule { }
