@@ -23,6 +23,7 @@ speed-measure-plugin.json
 
 # IDE - VSCode
 .vscode/*
+.vscode/launch.json
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
@@ -37,6 +38,7 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+.editorconfig
 
 # System Files
 .DS_Store
