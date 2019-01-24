@@ -4,7 +4,7 @@
 git branch
 git checkout master
 git add .
-git commit -am"_book"
+git commit -am"_dist"
 git pull --rebase
 git push
 
@@ -12,7 +12,7 @@ git push
 git checkout gh-pages
 git branch
 rm -rf *~
-git checkout master _book 
+git checkout master dist
 cp -r _book/* .
 rm -rf _book
 
