@@ -31,3 +31,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ng generate component heroes   --- 新建组件
+
+$ ng build --prod --base-href "https://shmilycai.github.io/angular-ui/"
+
+https://shmilycai.github.io/angular-ui
