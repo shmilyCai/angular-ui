@@ -1,10 +1,10 @@
 #!/bin/sh
 
-### 先提交master分支下的_book文件
+### 先提交master分支下的dist文件
 git branch
 git checkout master
 git add .
-git commit -am"_dist"
+git commit -am"dist"
 git pull --rebase
 git push
 
@@ -13,8 +13,8 @@ git checkout gh-pages
 git branch
 rm -rf *~
 git checkout master dist
-cp -r _book/* .
-rm -rf _book
+cp -r dist/* .
+rm -rf dist
 
 #### 提交到git上
 date=$(date +%Y%m%d)
